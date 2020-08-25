@@ -1,0 +1,11 @@
+<h1>Upload Image</h1>
+<%= form_with scope: :image, url: images_path, local: true do |form| %>
+  <p>
+    <%= form.label :caption %><br>
+    <%= form.text_area :caption %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
