@@ -1,0 +1,23 @@
+<h1>Edit Image</h1>
+<%= form_with(model: @image, local: true) do |form| %>
+  <% if @image.errors.any? %>
+    <div id="error_explanation">
+      <h2>Error: could not edit image</h2>
+      <ul>
+        <% @image.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :caption %><br>
+    <%= form.text_field :caption %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', images_path %>
