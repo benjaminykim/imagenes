@@ -1,5 +1,6 @@
 <h1>Public Images</h1>
 
+<%= link_to 'Upload Image', new_image_path %>
 <table>
   <tr>
     <th>ID</th>
@@ -10,7 +11,7 @@
   <% @images.each do |image| %>
     <tr>
       <td><%= image.id %></td>
-      <td>Image</td>
+      <td><%= link_to 'Show', image_path(image) %></td>
       <td><%= image.caption %></td>
     </tr>
   <% end %>
