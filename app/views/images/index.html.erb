@@ -11,9 +11,11 @@
   <% @images.each do |image| %>
     <tr>
       <td><%= image.id %></td>
-      <td><%= link_to 'Show', image_path(image) %></td>
       <td><%= image.caption %></td>
+      <td><%= link_to 'Show', image_path(image) %></td>
+      <td><%= link_to 'Edit', edit_image_path(image) %></td>
     </tr>
   <% end %>
 </table>
+
 
